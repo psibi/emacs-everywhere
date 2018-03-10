@@ -13,7 +13,7 @@
   (cond
    ((string-equal system-type "darwin") (ea-on-mac))
    ((string-equal system-type "gnu/linux") (ea-on-linux)))
-  (kill-buffer "*Emacs Everywhere*"))
+  )
 
 (defun ea-hook ()
   (add-hook 'delete-frame-functions 'ea-on-delete))

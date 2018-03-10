@@ -12,8 +12,7 @@
   A keyboard shortcut of your choosing creates a temporary frame and buffer. The text is automatically inserted into the application you&apos;re using. Bust your moves on the fly, with fewer keystrokes. Invoke the shortcut with selected text and it will be replaced.
 </p>
 
-
-
+Note that this is a fork of [emacs_anywhere](https://github.com/zachcurry/emacs-anywhere) but with a better support for Linux. [See Faq](#faq) for more details.
 
 ## Install ##
 ### OSX ###
@@ -70,7 +69,17 @@ If your Emacs server isn't running when you use the keyboard shortcut, **Emacs E
 - Homebrew
 - Windows
 
-## Contributing ##
-TBD
+## FAQ
 
-Copyright © 2018, Zach Curry, All rights reserved.
+### Why the fork ? 
+
+Because the orignal maintainer didn't want to a non clipboard based approach for Linux systems. See these issues for more details:
+* [PR 23](https://github.com/zachcurry/emacs-anywhere/pull/23)
+* [Issue 18](https://github.com/zachcurry/emacs-anywhere/issues/18#issuecomment-370259456)
+* [Issue 36](https://github.com/zachcurry/emacs-anywhere/issues/36)
+
+
+## Contributing ##
+All contributions and pull requests are welcome.
+
+Copyright © 2018, Sibi Prabakaran & Zach Curry, All rights reserved.

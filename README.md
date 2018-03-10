@@ -22,20 +22,10 @@ curl -fsSL https://raw.github.com/psibi/emacs-everywhere/master/install | bash
 Open **System Preferences** and navigate to **keyboard > shortcuts > Services**. Check the box beside "Emacs Everywhere" and click "Add Shortcut" and key a shortcut.
 
 ### Linux ###
->### dependencies: **xdotool**, **xclip** ###
+>### dependencies: **xdotool** ###
 >Install as needed
 >``` bash
 >sudo apt-get install xdotool
->```
->``` bash
->sudo apt-get install xclip
->```
->**Wayland** window manager is **not supported**. You can **switch** your window manager in **Ubuntu** by going to the login screen and selecting **Xorg** as your window manager.
-
-<p align="center">
-  <img src="https://imgur.com/DrVbpRX.jpg" width="500px"></img>
-</p>
-
 
 #### Installation ####
 

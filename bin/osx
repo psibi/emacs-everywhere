@@ -5,7 +5,7 @@ frontmost_app_name=$( osascript -e 'tell application "System Events"' \
                                 -e 'end tell' \
                                 -e 'aName' )
 
-$HOME/.emacs_anywhere/bin/emacstask
+$HOME/.emacs_everywhere/bin/emacstask
 
 osascript -e "tell application \"$frontmost_app_name\" to activate"
 osascript -e 'tell application "System Events" to keystroke "v" using command down'

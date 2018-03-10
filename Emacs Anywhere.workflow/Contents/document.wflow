@@ -61,7 +61,7 @@
 					<key>COMMAND_STRING</key>
 					<string>
           export PATH=/usr/local/bin:$PATH
-          source ~/.emacs_anywhere/bin/run
+          source ~/.emacs_everywhere/bin/run
           </string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIN_PATH=$HOME/.emacs_anywhere/bin
+BIN_PATH=$HOME/.emacs_everywhere/bin
 
 err () { echo -e "Error: $@" 1>&2; }
 

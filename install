@@ -2,8 +2,8 @@
 
 set -e
 
-EA_PATH=$HOME/.emacs_anywhere
-EA_URL='https://github.com/zachcurry/emacs-anywhere.git'
+EA_PATH=$HOME/.emacs_everywhere
+EA_URL='https://github.com/psibi/emacs_everywhere.git'
 
 err () { echo -e "Error: $@" 1>&2; }
 
@@ -22,7 +22,7 @@ require_deps () {
 
 case $OSTYPE in
     "darwin"*)
-        WRKFLW_PATH=$EA_PATH/Emacs\ Anywhere.workflow
+        WRKFLW_PATH=$EA_PATH/Emacs\ Everywhere.workflow
         SERVICES_PATH=$HOME/Library/Services
         ;;
     "linux-gnu")
@@ -39,9 +39,9 @@ require_deps emacsclient git
 if [ -a $EA_PATH ]; then
     echo 'Uninstalling existing installation...'
     rm -rf $EA_PATH
-    echo 'Reinstalling Emacs Anywhere...'
+    echo 'Reinstalling Emacs Everywhere...'
 else
-    echo "Installing Emacs Anywhere..."
+    echo "Installing Emacs Everywhere..."
 fi
 
 git clone $EA_URL $EA_PATH
@@ -51,4 +51,4 @@ if [[ $OSTYPE == "darwin"* ]]; then
     cp -Rf "${WRKFLW_PATH}" $SERVICES_PATH
 fi
 
-echo Emacs Anywhere has been installed!
+echo Emacs Everywhere has been installed!

@@ -2,19 +2,19 @@
 
 set -e
 
-EA_PATH=$HOME/.emacs_anywhere
+EA_PATH=$HOME/.emacs_everywhere
 
 err () { echo -e "Error: $@" 1>&2; }
 
 if [ ! -d $EA_PATH ]; then
-    err emacs-anywhere is not installed
+    err emacs-everywhere is not installed
     exit 1
 fi
 
 rm -rf $EA_PATH
 
 if [[ $OSTYPE == "darwin"* ]]; then
-   rm -rf $HOME/Library/Services/Emacs\ Anywhere.workflow
+   rm -rf $HOME/Library/Services/Emacs\ Everywhere.workflow
 fi
 
-echo Emacs Anywhere has been uninstalled!
+echo Emacs Everywhere has been uninstalled!

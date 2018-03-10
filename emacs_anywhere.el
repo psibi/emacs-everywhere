@@ -1,17 +1,19 @@
-(defun osx-on-delete ()
+(defun ea-on-linux ()
+  (write-region (point-min) (point-max) "~/.emacs_everywhere/clipboard")
+  (kill-buffer "*Emacs Everywhere*")
+  )
+
+(defun ea-on-mac ()
   (clipboard-kill-ring-save
    (point-min)
-   (point-max)))
-
-(defun linux-on-delete ()
-  (write-region nil nil "/tmp/eaclipboard")
-  (shell-command "xclip -selection clipboard /tmp/eaclipboard &> /dev/null"))
+   (point-max))
+  (kill-buffer "*Emacs Everywhere*"))
 
 (defun ea-on-delete (frame)
   (cond
-   ((string-equal system-type "darwin") (osx-on-delete))
-   ((string-equal system-type "gnu/linux") (linux-on-delete)))
-  (kill-buffer "*Emacs Anywhere*"))
+   ((string-equal system-type "darwin") (ea-on-mac))
+   ((string-equal system-type "gnu/linux") (ea-on-linux)))
+  (kill-buffer "*Emacs Everywhere*"))
 
 (defun ea-hook ()
   (add-hook 'delete-frame-functions 'ea-on-delete))
@@ -19,12 +21,12 @@
 (defun ea-unhook ()
   (remove-hook 'delete-frame-functions 'ea-on-delete))
 
-(defun emacs-anywhere ()
+(defun emacs-everywhere ()
   (interactive)
-  (if (y-or-n-p "On delete-frame copy current-buffer to clipboard and kill *Emacs Anywhere*? ")
+  (if (y-or-n-p "On delete-frame copy current-buffer to clipboard and kill *Emacs Everywhere*? ")
       (ea-hook)
     (ea-unhook)))
 
 (ea-hook)
-(switch-to-buffer "*Emacs Anywhere*")
+(switch-to-buffer "*Emacs Everywhere*")
 (select-frame-set-input-focus (selected-frame))

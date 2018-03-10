@@ -1,5 +1,5 @@
 #!/bin/bash
 
-ELISP=$( cat $HOME/.emacs_anywhere/emacs_anywhere.el )
+ELISP=$( cat $HOME/.emacs_everywhere/emacs_everywhere.el )
 
 emacsclient -a '' -c -e "(progn $ELISP)"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 frontmost_app_name=$( osascript -e 'tell application "System Events"' \
                                 -e 'set aName to name of first application process whose frontmost is true' \

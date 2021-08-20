@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ELISP=$( cat $HOME/.emacs_everywhere/emacs_everywhere.el )
 

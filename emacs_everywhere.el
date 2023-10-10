@@ -1,7 +1,6 @@
 (defun ea-on-linux ()
   (write-region (point-min) (point-max) "~/.emacs_everywhere/clipboard")
-  (kill-buffer "*Emacs Everywhere*")
-  )
+  (kill-buffer "*Emacs Everywhere*"))
 
 (defun ea-on-mac ()
   (clipboard-kill-ring-save

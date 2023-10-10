@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-window="$( xdotool getactivewindow || xdotool getwindowfocus )"
-
-$HOME/.emacs_everywhere/bin/emacstask
-
-xdotool windowfocus --sync $window
-
 clipboard="$( cat $HOME/.emacs_everywhere/clipboard | tr \\n \\r | sed s/\\r*\$// )"
 
-xdotool type --clearmodifiers --delay 1 "$clipboard"
+wtype -d 1 "$clipboard"

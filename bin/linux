@@ -4,4 +4,4 @@ $HOME/.emacs_everywhere/bin/emacstask
 
 clipboard="$( cat $HOME/.emacs_everywhere/clipboard | tr \\n \\r | sed s/\\r*\$// )"
 
-xdotool type --clearmodifiers --delay 1 "$clipboard"
+wtype -d 1 "$clipboard"

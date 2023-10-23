@@ -22,10 +22,10 @@ curl -fsSL https://raw.github.com/psibi/emacs-everywhere/master/install | bash
 Open **System Preferences** and navigate to **keyboard > shortcuts > Services**. Check the box beside "Emacs Everywhere" and click "Add Shortcut" and key a shortcut.
 
 ### Linux ###
->### dependencies: **xdotool** ###
->Install as needed
+>### dependencies: [wtype](https://github.com/atx/wtype) ###
+>Install as needed, e.g. for Debian-based systems via
 >``` bash
->sudo apt-get install xdotool
+>sudo apt-get install wtype
 
 #### Installation ####
 
